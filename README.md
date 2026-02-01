@@ -1,81 +1,81 @@
-# Vantage - 销售数据分析与智能洞察平台
+# Vantage - Sales Data Analytics & Insights Platform
 
-上传 Excel 销售数据后，自动检测敏感信息（手机号、身份证、邮箱等），并从**地域**、**产品**、**趋势**等维度提供智能数据洞察。
+Upload Excel sales data to automatically detect sensitive information (phone numbers, IDs, emails, etc.) and provide intelligent data insights across **Region**, **Product**, and **Trend** dimensions.
 
-## 功能概览
+## Feature Overview
 
-### 🛡️ 数据安全与基础分析
-- **📤 Excel 上传**：支持 `.xlsx`、`.xls`、`.csv`，拖拽或点击上传
-- **🔍 敏感信息检测**：自动识别手机号、身份证号、邮箱、银行卡号、中文姓名等，并给出按列分布报告
-- **📊 数据概览**：显示总记录数、数据列数、敏感信息条数等关键指标
+### 🛡️ Data Security & Basic Analytics
+- **📤 Excel Upload**: Supports `.xlsx`, `.xls`, `.csv` files with drag-and-drop or click-to-upload functionality
+- **🔍 Sensitive Information Detection**: Automatically identifies phone numbers, ID numbers, email addresses, bank card numbers, Chinese names, and provides distribution reports by column
+- **📊 Data Overview**: Displays key metrics including total records, data columns, and sensitive information counts
 
-### 📈 智能销售分析
-- **🔥 爆款趋势预测**：
-  - 基于销售占比与近期销量，识别当前阶段具爆款潜力的产品
-  - 自动切分近期/前期数据（支持日期列或按行序）
-  - 展示销售占比、总销量、潜力指数等指标
+### 📈 Intelligent Sales Analytics
+- **🔥 Hot Product Trend Prediction**:
+  - Identifies products with viral potential based on sales share and recent sales volume
+  - Automatically splits recent/historical data (supports date columns or row order)
+  - Displays sales share, total sales, potential score, and other key indicators
 
-- **🎯 产品地区分布分析**：
-  - 分析每个产品在不同地区的用户分布
-  - 识别哪些地区对哪些产品更青睐
-  - 支持产品列表选择，查看详细地区分布图表
+- **🎯 Product Region Distribution Analysis**:
+  - Analyzes user distribution for each product across different regions
+  - Identifies which regions show higher preference for which products
+  - Supports product list selection for detailed region distribution charts
 
-- **🏆 销量 Top 3 产品地区分布（数据看板）**：
-  - 聚焦销售量最高的 3 个产品
-  - 堆叠柱状图：展示各地区中各产品的销量对比
-  - 分组柱状图：展示各产品在不同地区的销量分布
-  - 支持图表视图切换，Tooltip 按实际销量排序显示数据
+- **🏆 Sales Top 3 Products Region Distribution (Dashboard)**:
+  - Focuses on the top 3 products by sales volume
+  - Stacked Bar Chart: Shows sales comparison of different products within each region
+  - Grouped Bar Chart: Shows sales distribution of each product across different regions
+  - Supports chart view switching with tooltips displaying data sorted by actual sales
 
-### 📉 多维度数据可视化
-- **🗺️ 地域/来源集中度**：饼图、条形图 — 自动识别列名含「地区」「省」「市」「来源」「区域」「State」「City」等（支持中英文）
-- **💰 按地域汇总金额/数量**：柱状图
-- **🏷️ 分类分布**：饼图
-- **📊 其他维度分布与趋势**：条形图、折线图
+### 📉 Multi-Dimensional Data Visualization
+- **🗺️ Region/Source Concentration**: Pie and bar charts — automatically identifies columns containing "region", "province", "city", "source", "area", "State", "City", etc. (supports both Chinese and English)
+- **💰 Regional Sales/Amount Summary**: Bar charts
+- **🏷️ Category Distribution**: Pie charts
+- **📊 Other Dimension Distribution & Trends**: Bar and line charts
 
-## 本地运行
+## Local Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-浏览器打开终端提示的地址（一般为 http://localhost:5173 或 http://localhost:5174）。
+Open the URL shown in the terminal (typically http://localhost:5173 or http://localhost:5174).
 
-## 测试数据说明
+## Sample Data Guidelines
 
-Excel 表头建议包含可识别的列名，以便自动选维度：
+For automatic dimension selection, Excel headers should include recognizable column names:
 
-### 🌍 地域相关列
-- 中文：`地区`、`省份`、`城市`、`客户来源`、`区域` 等
-- 英文：`State`、`Region`、`Province`、`City`、`Address`、`Location`、`Country` 等
+### 🌍 Region-Related Columns
+- Chinese: `地区`, `省份`, `城市`, `客户来源`, `区域`, etc.
+- English: `State`, `Region`, `Province`, `City`, `Address`, `Location`, `Country`, etc.
 
-### 📦 产品相关列
-- 中文：`产品`、`商品`、`品名`、`SKU`、`名称`、`品类`、`类目` 等
-- 英文：`Product`、`Item`、`SKU`、`Name`、`Category`、`Goods` 等
+### 📦 Product-Related Columns
+- Chinese: `产品`, `商品`, `品名`, `SKU`, `名称`, `品类`, `类目`, etc.
+- English: `Product`, `Item`, `SKU`, `Name`, `Category`, `Goods`, etc.
 
-### 🔢 数值相关列
-- `金额`、`数量`、`销售额`、`Sales`、`Amount`、`Quantity` 等
+### 🔢 Numeric Columns
+- `金额`, `数量`, `销售额`, `Sales`, `Amount`, `Quantity`, etc.
 
-### 📅 日期相关列
-- `日期`、`时间`、`下单日期`、`Date`、`Time`、`Order Date` 等
+### 📅 Date-Related Columns
+- `日期`, `时间`, `下单日期`, `Date`, `Time`, `Order Date`, etc.
 
-有这些列时，页面会自动生成对应的图表和分析看板。
+When these columns are present, the page automatically generates corresponding charts and analytics dashboards.
 
-## 技术栈
+## Tech Stack
 
-- **⚛️ React 18** + **⚡ Vite 5**：现代化前端开发框架
-- **📗 xlsx (SheetJS)**：解析 Excel 文件
-- **📈 Recharts**：数据可视化图表库
-- **🔒 纯前端处理**：数据不离开本机，保障隐私安全
+- **⚛️ React 18** + **⚡ Vite 5**: Modern frontend development framework
+- **📗 xlsx (SheetJS)**: Excel file parsing
+- **📈 Recharts**: Data visualization library
+- **🔒 Pure Frontend Processing**: Data never leaves your device, ensuring privacy security
 
-## 特色亮点
+## Key Features
 
-1. **🧠 智能列识别**：支持中英文列名自动匹配，无需手动配置
-2. **🔐 数据安全**：所有数据处理在浏览器本地完成，不涉及后端传输
-3. **🎨 交互式分析**：支持图表切换、产品选择、数据钻取等交互操作
-4. **📱 响应式设计**：适配不同屏幕尺寸，提供良好的用户体验
-5. **🔄 热更新**：代码修改后自动刷新，无需重启开发服务器
+1. **🧠 Intelligent Column Recognition**: Supports automatic Chinese and English column name matching without manual configuration
+2. **🔐 Data Security**: All data processing happens locally in the browser with no backend transmission
+3. **🎨 Interactive Analytics**: Supports chart switching, product selection, data drilling, and other interactive operations
+4. **📱 Responsive Design**: Adapts to different screen sizes for optimal user experience
+5. **🔄 Hot Module Replacement**: Code changes trigger automatic refresh without restarting the dev server
 
-## 许可证
+## License
 
 MIT
