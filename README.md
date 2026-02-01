@@ -1,6 +1,12 @@
-# Vantage - Sales Data Analytics & Insights Platform
+# Vantage: Master Your Commerce Flow
 
-Upload Excel sales data to automatically detect sensitive information (phone numbers, IDs, emails, etc.) and provide intelligent data insights across **Region**, **Product**, and **Trend** dimensions.
+**See what others miss. Scale where others stall.**
+
+Vantage is the all-in-one command center designed for the modern e-commerce architect. In an era of fragmented marketplaces, Vantage bridges the gap between raw data and decisive action—whether you're scaling on Shopify, dominating Amazon, or managing a complex multi-channel ecosystem.
+
+Stop guessing which segments are driving your growth. Vantage provides a 360-degree view of your entire operation: from the millisecond a high-intent customer clicks "order" to the moment your product is delivered via FedEx, UPS, or USPS. Our engine identifies hidden sales patterns and seasonal fluctuations across your entire catalog, while our intelligent regional heatmaps pinpoint exactly where your brand is winning—from the bustling tech hubs of California to the high-growth markets of the East Coast.
+
+With Vantage, you don't just track your business—you gain the ultimate vantage point to outpace the competition.
 
 ## Feature Overview
 
